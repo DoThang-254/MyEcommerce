@@ -1,0 +1,112 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\.net\\MyECommerce\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{44C4B4BA-3211-4E25-9252-B0F2B286A796}|Services\\UserService\\src\\UserService.API\\UserService.API.csproj|d:\\.net\\myecommerce\\services\\userservice\\src\\userservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{44C4B4BA-3211-4E25-9252-B0F2B286A796}|Services\\UserService\\src\\UserService.API\\UserService.API.csproj|solutionrelative:services\\userservice\\src\\userservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44C4B4BA-3211-4E25-9252-B0F2B286A796}|Services\\UserService\\src\\UserService.API\\UserService.API.csproj|d:\\.net\\myecommerce\\services\\userservice\\src\\userservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44C4B4BA-3211-4E25-9252-B0F2B286A796}|Services\\UserService\\src\\UserService.API\\UserService.API.csproj|solutionrelative:services\\userservice\\src\\userservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20AD351F-C113-4311-A294-B3965DFB6D17}|Gateway\\ApiGateway\\ApiGateway.csproj|d:\\.net\\myecommerce\\gateway\\apigateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20AD351F-C113-4311-A294-B3965DFB6D17}|Gateway\\ApiGateway\\ApiGateway.csproj|solutionrelative:gateway\\apigateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20AD351F-C113-4311-A294-B3965DFB6D17}|Gateway\\ApiGateway\\ApiGateway.csproj|d:\\.net\\myecommerce\\gateway\\apigateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{20AD351F-C113-4311-A294-B3965DFB6D17}|Gateway\\ApiGateway\\ApiGateway.csproj|solutionrelative:gateway\\apigateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\.net\\MyECommerce\\Services\\UserService\\src\\UserService.API\\Program.cs",
+              "RelativeDocumentMoniker": "Services\\UserService\\src\\UserService.API\\Program.cs",
+              "ToolTip": "D:\\.net\\MyECommerce\\Services\\UserService\\src\\UserService.API\\Program.cs",
+              "RelativeToolTip": "Services\\UserService\\src\\UserService.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T00:40:43.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\.net\\MyECommerce\\Services\\UserService\\src\\UserService.API\\appsettings.json",
+              "RelativeDocumentMoniker": "Services\\UserService\\src\\UserService.API\\appsettings.json",
+              "ToolTip": "D:\\.net\\MyECommerce\\Services\\UserService\\src\\UserService.API\\appsettings.json",
+              "RelativeToolTip": "Services\\UserService\\src\\UserService.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-10T00:40:39.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\.net\\MyECommerce\\Gateway\\ApiGateway\\Program.cs",
+              "RelativeDocumentMoniker": "Gateway\\ApiGateway\\Program.cs",
+              "ToolTip": "D:\\.net\\MyECommerce\\Gateway\\ApiGateway\\Program.cs",
+              "RelativeToolTip": "Gateway\\ApiGateway\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T23:45:25.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\.net\\MyECommerce\\Gateway\\ApiGateway\\appsettings.json",
+              "RelativeDocumentMoniker": "Gateway\\ApiGateway\\appsettings.json",
+              "ToolTip": "D:\\.net\\MyECommerce\\Gateway\\ApiGateway\\appsettings.json",
+              "RelativeToolTip": "Gateway\\ApiGateway\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-08T00:14:11.647Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

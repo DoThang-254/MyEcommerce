@@ -1,0 +1,6 @@
+services:
+  sqlserver:
+    environment:
+      MSSQL_SA_PASSWORD: "${SQL_PASSWORD}"
+    ports:
+      - "${SQL_PORT}:14332"

@@ -1,0 +1,227 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\.net\\MyECommerce\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2E94F180-2D91-4F5E-91E7-2E964275B743}|Services\\ProductService\\src\\ProductService.API\\ProductService.API.csproj|d:\\.net\\myecommerce\\services\\productservice\\src\\productservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2E94F180-2D91-4F5E-91E7-2E964275B743}|Services\\ProductService\\src\\ProductService.API\\ProductService.API.csproj|solutionrelative:services\\productservice\\src\\productservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20AD351F-C113-4311-A294-B3965DFB6D17}|Gateway\\ApiGateway\\ApiGateway.csproj|d:\\.net\\myecommerce\\gateway\\apigateway\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{20AD351F-C113-4311-A294-B3965DFB6D17}|Gateway\\ApiGateway\\ApiGateway.csproj|solutionrelative:gateway\\apigateway\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20AD351F-C113-4311-A294-B3965DFB6D17}|Gateway\\ApiGateway\\ApiGateway.csproj|d:\\.net\\myecommerce\\gateway\\apigateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{20AD351F-C113-4311-A294-B3965DFB6D17}|Gateway\\ApiGateway\\ApiGateway.csproj|solutionrelative:gateway\\apigateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E94F180-2D91-4F5E-91E7-2E964275B743}|Services\\ProductService\\src\\ProductService.API\\ProductService.API.csproj|d:\\.net\\myecommerce\\services\\productservice\\src\\productservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E94F180-2D91-4F5E-91E7-2E964275B743}|Services\\ProductService\\src\\ProductService.API\\ProductService.API.csproj|solutionrelative:services\\productservice\\src\\productservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{085E0BC9-4E00-4E39-9CC8-D726F52A8577}|BuildingBlocks\\Shared.Infrastructure\\Shared.Infrastructure.csproj|d:\\.net\\myecommerce\\buildingblocks\\shared.infrastructure\\persistence\\basedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{085E0BC9-4E00-4E39-9CC8-D726F52A8577}|BuildingBlocks\\Shared.Infrastructure\\Shared.Infrastructure.csproj|solutionrelative:buildingblocks\\shared.infrastructure\\persistence\\basedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2119D044-8456-4D51-8EAB-52C82CEBD50E}|Services\\ProductService\\src\\ProductService.Infrastructure\\ProductService.Infrastructure.csproj|d:\\.net\\myecommerce\\services\\productservice\\src\\productservice.infrastructure\\data\\productdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2119D044-8456-4D51-8EAB-52C82CEBD50E}|Services\\ProductService\\src\\ProductService.Infrastructure\\ProductService.Infrastructure.csproj|solutionrelative:services\\productservice\\src\\productservice.infrastructure\\data\\productdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{085E0BC9-4E00-4E39-9CC8-D726F52A8577}|BuildingBlocks\\Shared.Infrastructure\\Shared.Infrastructure.csproj|d:\\.net\\myecommerce\\buildingblocks\\shared.infrastructure\\repositories\\currentuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{085E0BC9-4E00-4E39-9CC8-D726F52A8577}|BuildingBlocks\\Shared.Infrastructure\\Shared.Infrastructure.csproj|solutionrelative:buildingblocks\\shared.infrastructure\\repositories\\currentuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1109A817-8B8D-479D-9973-E9C916B595AC}|Services\\ProductService\\src\\ProductService.Application\\ProductService.Application.csproj|d:\\.net\\myecommerce\\services\\productservice\\src\\productservice.application\\features\\products\\commands\\createproduct\\createproductcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1109A817-8B8D-479D-9973-E9C916B595AC}|Services\\ProductService\\src\\ProductService.Application\\ProductService.Application.csproj|solutionrelative:services\\productservice\\src\\productservice.application\\features\\products\\commands\\createproduct\\createproductcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C52A88F-4953-4B42-8B0F-21D6D9E3B54E}|Services\\UserService\\src\\UserService.Infrastructure\\UserService.Infrastructure.csproj|d:\\.net\\myecommerce\\services\\userservice\\src\\userservice.infrastructure\\data\\userdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C52A88F-4953-4B42-8B0F-21D6D9E3B54E}|Services\\UserService\\src\\UserService.Infrastructure\\UserService.Infrastructure.csproj|solutionrelative:services\\userservice\\src\\userservice.infrastructure\\data\\userdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2119D044-8456-4D51-8EAB-52C82CEBD50E}|Services\\ProductService\\src\\ProductService.Infrastructure\\ProductService.Infrastructure.csproj|d:\\.net\\myecommerce\\services\\productservice\\src\\productservice.infrastructure\\data\\productdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2119D044-8456-4D51-8EAB-52C82CEBD50E}|Services\\ProductService\\src\\ProductService.Infrastructure\\ProductService.Infrastructure.csproj|solutionrelative:services\\productservice\\src\\productservice.infrastructure\\data\\productdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C52A88F-4953-4B42-8B0F-21D6D9E3B54E}|Services\\UserService\\src\\UserService.Infrastructure\\UserService.Infrastructure.csproj|d:\\.net\\myecommerce\\services\\userservice\\src\\userservice.infrastructure\\data\\userdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C52A88F-4953-4B42-8B0F-21D6D9E3B54E}|Services\\UserService\\src\\UserService.Infrastructure\\UserService.Infrastructure.csproj|solutionrelative:services\\userservice\\src\\userservice.infrastructure\\data\\userdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "D:\\.net\\MyECommerce\\Gateway\\ApiGateway\\Dockerfile",
+              "RelativeDocumentMoniker": "Gateway\\ApiGateway\\Dockerfile",
+              "ToolTip": "D:\\.net\\MyECommerce\\Gateway\\ApiGateway\\Dockerfile",
+              "RelativeToolTip": "Gateway\\ApiGateway\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-09T01:25:10.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\.net\\MyECommerce\\Services\\ProductService\\src\\ProductService.API\\appsettings.json",
+              "RelativeDocumentMoniker": "Services\\ProductService\\src\\ProductService.API\\appsettings.json",
+              "ToolTip": "D:\\.net\\MyECommerce\\Services\\ProductService\\src\\ProductService.API\\appsettings.json",
+              "RelativeToolTip": "Services\\ProductService\\src\\ProductService.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-08T04:19:30.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\.net\\MyECommerce\\Services\\ProductService\\src\\ProductService.API\\Program.cs",
+              "RelativeDocumentMoniker": "Services\\ProductService\\src\\ProductService.API\\Program.cs",
+              "ToolTip": "D:\\.net\\MyECommerce\\Services\\ProductService\\src\\ProductService.API\\Program.cs",
+              "RelativeToolTip": "Services\\ProductService\\src\\ProductService.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T04:19:27.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\.net\\MyECommerce\\Gateway\\ApiGateway\\appsettings.json",
+              "RelativeDocumentMoniker": "Gateway\\ApiGateway\\appsettings.json",
+              "ToolTip": "D:\\.net\\MyECommerce\\Gateway\\ApiGateway\\appsettings.json",
+              "RelativeToolTip": "Gateway\\ApiGateway\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-08T00:14:11.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserDbContextFactory.cs",
+              "DocumentMoniker": "D:\\.net\\MyECommerce\\Services\\UserService\\src\\UserService.Infrastructure\\Data\\UserDbContextFactory.cs",
+              "RelativeDocumentMoniker": "Services\\UserService\\src\\UserService.Infrastructure\\Data\\UserDbContextFactory.cs",
+              "ToolTip": "D:\\.net\\MyECommerce\\Services\\UserService\\src\\UserService.Infrastructure\\Data\\UserDbContextFactory.cs",
+              "RelativeToolTip": "Services\\UserService\\src\\UserService.Infrastructure\\Data\\UserDbContextFactory.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAQwDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T03:12:45.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductDbContextFactory.cs",
+              "DocumentMoniker": "D:\\.net\\MyECommerce\\Services\\ProductService\\src\\ProductService.Infrastructure\\Data\\ProductDbContextFactory.cs",
+              "RelativeDocumentMoniker": "Services\\ProductService\\src\\ProductService.Infrastructure\\Data\\ProductDbContextFactory.cs",
+              "ToolTip": "D:\\.net\\MyECommerce\\Services\\ProductService\\src\\ProductService.Infrastructure\\Data\\ProductDbContextFactory.cs",
+              "RelativeToolTip": "Services\\ProductService\\src\\ProductService.Infrastructure\\Data\\ProductDbContextFactory.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAQwDIAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T03:11:23.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserDbContext.cs",
+              "DocumentMoniker": "D:\\.net\\MyECommerce\\Services\\UserService\\src\\UserService.Infrastructure\\Data\\UserDbContext.cs",
+              "RelativeDocumentMoniker": "Services\\UserService\\src\\UserService.Infrastructure\\Data\\UserDbContext.cs",
+              "ToolTip": "D:\\.net\\MyECommerce\\Services\\UserService\\src\\UserService.Infrastructure\\Data\\UserDbContext.cs",
+              "RelativeToolTip": "Services\\UserService\\src\\UserService.Infrastructure\\Data\\UserDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAQwAsAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T03:10:10.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductDbContext.cs",
+              "DocumentMoniker": "D:\\.net\\MyECommerce\\Services\\ProductService\\src\\ProductService.Infrastructure\\Data\\ProductDbContext.cs",
+              "RelativeDocumentMoniker": "Services\\ProductService\\src\\ProductService.Infrastructure\\Data\\ProductDbContext.cs",
+              "ToolTip": "D:\\.net\\MyECommerce\\Services\\ProductService\\src\\ProductService.Infrastructure\\Data\\ProductDbContext.cs",
+              "RelativeToolTip": "Services\\ProductService\\src\\ProductService.Infrastructure\\Data\\ProductDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T03:09:38.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CreateProductCommandHandler.cs",
+              "DocumentMoniker": "D:\\.net\\MyECommerce\\Services\\ProductService\\src\\ProductService.Application\\Features\\Products\\Commands\\CreateProduct\\CreateProductCommandHandler.cs",
+              "RelativeDocumentMoniker": "Services\\ProductService\\src\\ProductService.Application\\Features\\Products\\Commands\\CreateProduct\\CreateProductCommandHandler.cs",
+              "ToolTip": "D:\\.net\\MyECommerce\\Services\\ProductService\\src\\ProductService.Application\\Features\\Products\\Commands\\CreateProduct\\CreateProductCommandHandler.cs",
+              "RelativeToolTip": "Services\\ProductService\\src\\ProductService.Application\\Features\\Products\\Commands\\CreateProduct\\CreateProductCommandHandler.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAA4wCkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T02:57:12.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CurrentUserService.cs",
+              "DocumentMoniker": "D:\\.net\\MyECommerce\\BuildingBlocks\\Shared.Infrastructure\\Repositories\\CurrentUserService.cs",
+              "RelativeDocumentMoniker": "BuildingBlocks\\Shared.Infrastructure\\Repositories\\CurrentUserService.cs",
+              "ToolTip": "D:\\.net\\MyECommerce\\BuildingBlocks\\Shared.Infrastructure\\Repositories\\CurrentUserService.cs",
+              "RelativeToolTip": "BuildingBlocks\\Shared.Infrastructure\\Repositories\\CurrentUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T02:55:18.703Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BaseDbContext.cs",
+              "DocumentMoniker": "D:\\.net\\MyECommerce\\BuildingBlocks\\Shared.Infrastructure\\Persistence\\BaseDbContext.cs",
+              "RelativeDocumentMoniker": "BuildingBlocks\\Shared.Infrastructure\\Persistence\\BaseDbContext.cs",
+              "ToolTip": "D:\\.net\\MyECommerce\\BuildingBlocks\\Shared.Infrastructure\\Persistence\\BaseDbContext.cs",
+              "RelativeToolTip": "BuildingBlocks\\Shared.Infrastructure\\Persistence\\BaseDbContext.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAMAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T02:46:28.56Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

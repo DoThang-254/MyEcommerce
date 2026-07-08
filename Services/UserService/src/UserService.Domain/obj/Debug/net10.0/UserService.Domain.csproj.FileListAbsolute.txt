@@ -1,0 +1,15 @@
+D:\.net\MyECommerce\Services\UserService\src\UserService.Domain\bin\Debug\net10.0\UserService.Domain.deps.json
+D:\.net\MyECommerce\Services\UserService\src\UserService.Domain\bin\Debug\net10.0\UserService.Domain.dll
+D:\.net\MyECommerce\Services\UserService\src\UserService.Domain\bin\Debug\net10.0\UserService.Domain.pdb
+D:\.net\MyECommerce\Services\UserService\src\UserService.Domain\bin\Debug\net10.0\Shared.Domain.dll
+D:\.net\MyECommerce\Services\UserService\src\UserService.Domain\bin\Debug\net10.0\Shared.Domain.pdb
+D:\.net\MyECommerce\Services\UserService\src\UserService.Domain\obj\Debug\net10.0\UserService.Domain.csproj.AssemblyReference.cache
+D:\.net\MyECommerce\Services\UserService\src\UserService.Domain\obj\Debug\net10.0\UserService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\.net\MyECommerce\Services\UserService\src\UserService.Domain\obj\Debug\net10.0\UserService.Domain.AssemblyInfoInputs.cache
+D:\.net\MyECommerce\Services\UserService\src\UserService.Domain\obj\Debug\net10.0\UserService.Domain.AssemblyInfo.cs
+D:\.net\MyECommerce\Services\UserService\src\UserService.Domain\obj\Debug\net10.0\UserService.Domain.csproj.CoreCompileInputs.cache
+D:\.net\MyECommerce\Services\UserService\src\UserService.Domain\obj\Debug\net10.0\UserServ.A0DBE7DD.Up2Date
+D:\.net\MyECommerce\Services\UserService\src\UserService.Domain\obj\Debug\net10.0\UserService.Domain.dll
+D:\.net\MyECommerce\Services\UserService\src\UserService.Domain\obj\Debug\net10.0\refint\UserService.Domain.dll
+D:\.net\MyECommerce\Services\UserService\src\UserService.Domain\obj\Debug\net10.0\UserService.Domain.pdb
+D:\.net\MyECommerce\Services\UserService\src\UserService.Domain\obj\Debug\net10.0\ref\UserService.Domain.dll

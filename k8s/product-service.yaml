@@ -1,0 +1,64 @@
+# k8s/product-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: product-service
+spec:
+  selector:
+    app: product-service
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080 # Port mặc định của .NET 8 trong Docker
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-service-deployment
+spec:
+  replicas: 3 # Chạy 3 bản sao (Load Balance nội bộ)
+  strategy:
+    type: RollingUpdate # Cập nhật không gián đoạn
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app: product-service
+  template:
+    metadata:
+      labels:
+        app: product-service
+    spec:
+      containers:
+      - name: product-service 
+        image: myecommerce/product-service:latest 
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+    env:
+        - name: ConnectionStrings__DefaultConnection
+          valueFrom:
+            secretKeyRef:
+              name: my-env-secret
+              key: DB_CONNECTION
+        - name: Jwt__Key
+          valueFrom:
+            secretKeyRef:
+              name: my-env-secret
+              key: JWT_KEY
+        - name: Jwt__Issuer
+          valueFrom:
+            secretKeyRef:
+              name: my-env-secret
+              key: JWT_ISSUER
+        - name: Jwt__Audience
+          valueFrom:
+            secretKeyRef:
+              name: my-env-secret
+              key: JWT_AUDIENCE
+        # Graceful Shutdown
+        lifecycle:
+          preStop:
+            exec:
+              command: ["/bin/sleep", "10"]

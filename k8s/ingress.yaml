@@ -1,0 +1,28 @@
+# k8s/ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: main-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+    # --- CẤU HÌNH RATE LIMIT ---
+    # Giới hạn 10 request / 1 giây trên mỗi IP
+    nginx.ingress.kubernetes.io/limit-rps: "10"
+    # Trả về lỗi 429 Too Many Requests nếu vượt quá giới hạn
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      limit_req_status 429;
+spec:
+  ingressClassName: nginx
+  rules:
+  # Cấu hình domain ảo (có thể đổi thành localhost nếu test local)
+  - host: api.127.0.0.1.nip.io 
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: api-gateway # Trỏ thẳng vào Gateway của bạn
+            port:
+              number: 80
