@@ -3,9 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using ProductService.Domain.Entities;
 using ProductService.Domain.Interfaces;
 using ProductService.Infrastructure.Data;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ProductService.Infrastructure.Repositories
 {

@@ -19,7 +19,7 @@ public static class SharedBootstrapper
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            builder.Services.AddOpenApi();
+            //builder.Services.AddOpenApi();
         }
 
         builder.Services.AddHttpContextAccessor();
@@ -48,7 +48,7 @@ public static class SharedBootstrapper
     {
         if (app.Environment.IsDevelopment() && enableControllers)
         {
-            app.MapOpenApi();
+            //app.MapOpenApi();
             app.UseSwagger();
             app.UseSwaggerUI();
         }

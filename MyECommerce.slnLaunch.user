@@ -3,15 +3,7 @@
     "Name": "New Profile",
     "Projects": [
       {
-        "Path": "Services\\ProductService\\src\\ProductService.API\\ProductService.API.csproj",
-        "Action": "Start"
-      },
-      {
-        "Path": "Gateway\\ApiGateway\\ApiGateway.csproj",
-        "Action": "Start"
-      },
-      {
-        "Path": "Services\\UserService\\src\\UserService.API\\UserService.API.csproj",
+        "Path": "Services\\OrserService\\src\\OrderService.API\\OrderService.API.csproj",
         "Action": "Start"
       }
     ]
