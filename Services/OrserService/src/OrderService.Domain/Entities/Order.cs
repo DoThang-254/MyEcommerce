@@ -32,6 +32,8 @@ namespace OrderService.Domain.Entities
         public string? TrackingNumber { get; private set; }
         public string? CancelReason { get; private set; }
 
+        public bool IsDeleted { get; private set; } = false;
+
         // Bảo vệ danh sách OrderItems, chỉ cho đọc từ bên ngoài
         private readonly List<OrderItem> _orderItems = new();
         public IReadOnlyCollection<OrderItem> OrderItems => _orderItems.AsReadOnly();
@@ -98,6 +100,40 @@ namespace OrderService.Domain.Entities
 
             // Đảm bảo tổng tiền không bị âm
             TotalAmount = Money.Of(Math.Max(0, totalValue), currency);
+        }
+
+        // 1. Nghiệp vụ UPDATE địa chỉ (Chỉ cho phép khi chưa giao hàng)
+        public void UpdateShippingAddress(Address newAddress)
+        {
+            if (Status != OrderStatus.Pending && Status != OrderStatus.Processing)
+            {
+                throw new InvalidOperationException("Không thể đổi địa chỉ khi đơn hàng đang được giao.");
+            }
+            ShippingAddress = newAddress ?? throw new ArgumentNullException(nameof(newAddress));
+        }
+
+        // 2. Nghiệp vụ UPDATE trạng thái (Quản lý chặt chẽ luồng đi của trạng thái)
+        public void TransitionToStatus(OrderStatus newStatus)
+        {
+            // Ví dụ: Đơn hàng đã Hủy hoặc đã Giao thì không được phép quay ngược lại các trạng thái khác
+            if (Status == OrderStatus.Cancelled || Status == OrderStatus.Delivered)
+            {
+                throw new InvalidOperationException($"Không thể chuyển trạng thái đơn hàng từ {Status} sang {newStatus}");
+            }
+            Status = newStatus;
+        }
+
+        // 3. Nghiệp vụ DELETE thực tế (Hủy đơn hàng)
+        public void Cancel()
+        {
+            if (Status == OrderStatus.Shipping || Status == OrderStatus.Delivered)
+            {
+                throw new InvalidOperationException("Đơn hàng đang đi giao hoặc đã giao thành công, không thể hủy.");
+            }
+            Status = OrderStatus.Cancelled;
+
+            // Có thể kết hợp cờ Soft Delete nếu muốn ẩn hoàn toàn khỏi UI khách hàng
+            // IsDeleted = true; 
         }
     }
 }

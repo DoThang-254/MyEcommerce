@@ -95,6 +95,11 @@ namespace OrderService.Infrastructure.Data.Configurations
             builder.Property(o => o.TrackingNumber).HasMaxLength(100);
             builder.Property(o => o.CancelReason).HasMaxLength(500);
 
+            // Cấu hình Global Query Filter: Tự động BỎ QUA các đơn hàng có IsDeleted = true
+            // Bất cứ khi nào bạn gọi _orderRepository.ListAsync() hoặc _orderRepository.GetByIdAsync(),
+            // EF Core sẽ tự động thêm đuôi "WHERE IsDeleted = 0" vào câu lệnh SQL ngầm.
+            builder.HasQueryFilter(o => !o.IsDeleted);
+
             // 3. Cấu hình Encapsulation (Đóng gói Collection)
             // Báo cho EF Core biết hãy map data thẳng vào biến private `_orderItems`
             builder.Metadata
