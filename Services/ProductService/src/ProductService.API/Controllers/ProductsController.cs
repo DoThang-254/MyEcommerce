@@ -39,7 +39,7 @@ namespace ProductService.API.Controllers
         /// Create a new product
         /// </summary>
         [HttpPost]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> Create([FromBody] CreateProductCommand command, CancellationToken cancellationToken)
         {
             var result = await Mediator.Send(command, cancellationToken);

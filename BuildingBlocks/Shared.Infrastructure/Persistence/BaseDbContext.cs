@@ -5,6 +5,7 @@ using Shared.Application.Common.Interfaces;
 using Shared.Domain.Entities;
 using Shared.Domain.Events;
 using Shared.Domain.Interfaces;
+using System.Text.Json;
 
 namespace Shared.Infrastructure.Persistence;
 
@@ -21,6 +22,7 @@ public abstract class BaseDbContext : DbContext, IUnitOfWork
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         // Tự động tìm và áp dụng các cấu hình (Configurations) trong cùng Assembly của Service
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(BaseDbContext).Assembly);
         modelBuilder.ApplyConfigurationsFromAssembly(this.GetType().Assembly);
         base.OnModelCreating(modelBuilder);
     }
@@ -30,10 +32,13 @@ public abstract class BaseDbContext : DbContext, IUnitOfWork
         // 1. Trước khi lưu, tự động cập nhật thông tin Auditing (Created/Modified)
         ApplyAbstractions();
 
-        // 2. Thực hiện lưu vào Database
+        // 2. Tạo Audit Logs từ các thay đổi của các entity
+        CreateAuditLogs();
+
+        // 3. Thực hiện lưu vào Database
         var result = await base.SaveChangesAsync(cancellationToken);
 
-        // 3. Sau khi lưu thành công, bạn có thể Dispatch Domain Events tại đây (nếu muốn)
+        // 4. Sau khi lưu thành công, bạn có thể Dispatch Domain Events tại đây (nếu muốn)
         await DispatchDomainEventsAsync();
         return result;
     }
@@ -91,4 +96,68 @@ public abstract class BaseDbContext : DbContext, IUnitOfWork
             await _mediator.Publish(domainEvent);
         }
     }
+
+    private void CreateAuditLogs()
+    {
+        var currentUserId = _currentUserService.UserId;
+        var serviceName = GetType().Name;
+        var nowUtc = DateTime.UtcNow;
+
+        var changedEntries = ChangeTracker
+            .Entries()
+            .Where(e => e.Entity is IBaseEntity &&
+                        e.State is EntityState.Added or EntityState.Modified or EntityState.Deleted)
+            .ToList();
+
+        if (changedEntries.Count == 0)
+        {
+            return;
+        }
+
+        var auditLogs = new List<AuditLog>();
+
+        foreach (var entry in changedEntries)
+        {
+            var entityName = entry.Metadata.ClrType.Name;
+            var entityId = entry.Properties.FirstOrDefault(p => p.Metadata.IsPrimaryKey())?.CurrentValue?.ToString()
+                           ?? entry.Properties.FirstOrDefault(p => p.Metadata.Name == "Id")?.CurrentValue?.ToString()
+                           ?? string.Empty;
+
+            var oldValues = entry.State == EntityState.Added ? null : GetScalarValues(entry.OriginalValues);
+            var newValues = entry.State == EntityState.Deleted ? null : GetCurrentScalarValues(entry);
+
+            auditLogs.Add(new AuditLog
+            {
+                OccurredAtUtc = nowUtc,
+                ServiceName = serviceName,
+                UserId = currentUserId,
+                EntityName = entityName,
+                EntityId = entityId,
+                Action = entry.State.ToString(),
+                OldValues = oldValues,
+                NewValues = newValues
+            });
+        }
+
+        Set<AuditLog>().AddRange(auditLogs);
+    }
+
+    private static string GetCurrentScalarValues(EntityEntry entry)
+    {
+        var values = entry.Properties
+            .Where(p => !p.Metadata.IsPrimaryKey())
+            .ToDictionary(p => p.Metadata.Name, p => p.CurrentValue);
+
+        return JsonSerializer.Serialize(values);
+    }
+
+    private static string GetScalarValues(PropertyValues values)
+    {
+        var dictionary = values.Properties
+            .Where(p => !p.IsPrimaryKey())
+            .ToDictionary(p => p.Name, p => values[p]);
+
+        return JsonSerializer.Serialize(dictionary);
+    }
 }
+

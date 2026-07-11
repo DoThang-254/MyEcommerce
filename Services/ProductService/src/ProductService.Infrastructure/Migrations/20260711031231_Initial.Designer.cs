@@ -12,8 +12,8 @@ using ProductService.Infrastructure.Data;
 namespace ProductService.Infrastructure.Migrations
 {
     [DbContext(typeof(ProductDbContext))]
-    [Migration("20260430030433_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20260711031231_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

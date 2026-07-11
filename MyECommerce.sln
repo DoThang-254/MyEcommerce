@@ -91,7 +91,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Domain", "Serv
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{02C0908E-0A33-E7C3-2A15-D4B748F2F8B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Application.Tests", "Services\OdserService\tests\OrderService.Application.Tests\OrderService.Application.Tests.csproj", "{45E7F1D7-172C-4D47-9F29-71811AF6FA37}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Application.Tests", "Services\OrderService\tests\OrderService.Application.Tests\OrderService.Application.Tests.csproj", "{45E7F1D7-172C-4D47-9F29-71811AF6FA37}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Domain.Tests", "Services\OrderService\tests\OrderService.Domain.Tests\OrderService.Domain.Tests.csproj", "{79E66761-4717-47AA-A9A3-AC2128E5D1CD}"
 EndProject
