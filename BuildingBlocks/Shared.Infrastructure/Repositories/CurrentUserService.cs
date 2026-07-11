@@ -13,5 +13,10 @@ namespace Shared.Infrastructure.Repositories
         }
 
         public string? UserId => _httpContextAccessor.HttpContext?.Request.Headers["X-User-Id"].FirstOrDefault();
+
+        public string? CorrelationId => _httpContextAccessor.HttpContext?.Request.Headers["X-Correlation-Id"].FirstOrDefault() 
+            ?? _httpContextAccessor.HttpContext?.TraceIdentifier;
+
+        public string? IpAddress => _httpContextAccessor.HttpContext?.Connection.RemoteIpAddress?.ToString();
     }
 }
