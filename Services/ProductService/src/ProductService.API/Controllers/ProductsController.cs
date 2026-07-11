@@ -1,16 +1,24 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using ProductService.Application.Features.Products.Commands.CreateProduct;
 using ProductService.Application.Features.Products.Commands.DeleteProduct;
 using ProductService.Application.Features.Products.Commands.UpdateProduct;
 using ProductService.Application.Features.Products.Queries.GetProductById;
 using ProductService.Application.Features.Products.Queries.GetProducts;
-using Microsoft.AspNetCore.Authorization;
 using Shared.API.Controllers;
+using Shared.Application.Common.Interfaces;
 
 namespace ProductService.API.Controllers
 {
     public class ProductsController : BaseController
     {
+        private readonly IFileStorageService _fileStorageService;
+
+        public ProductsController(IFileStorageService fileStorageService)
+        {
+            _fileStorageService = fileStorageService;
+        }
+
         /// <summary>
         /// Get all products
         /// </summary>
@@ -44,6 +52,25 @@ namespace ProductService.API.Controllers
         {
             var result = await Mediator.Send(command, cancellationToken);
             return CreatedAtAction(nameof(GetById), new { id = result.Data }, result);
+        }
+
+        [HttpPost("upload")]
+        public async Task<IActionResult> UploadImage(IFormFile file, CancellationToken cancellationToken)
+        {
+            if (file == null || file.Length == 0) return BadRequest("File trống.");
+
+            // Mở stream từ FormFile
+            using var stream = file.OpenReadStream();
+
+            // Gọi service global từ Building Blocks
+            var imageUrl = await _fileStorageService.UploadFileAsync(
+                stream,
+                file.FileName,
+                "products", // Tên folder lưu trên Cloudinary
+                cancellationToken
+            );
+
+            return Ok(new { Url = imageUrl });
         }
 
         /// <summary>

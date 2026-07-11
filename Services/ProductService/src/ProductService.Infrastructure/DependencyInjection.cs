@@ -19,7 +19,7 @@ public static class DependencyInjection
         });
 
         // 2. DÙNG LẠI DI TỪ SHARED: Đăng ký UnitOfWork tự động cho ProductDbContext
-        services.AddSharedInfrastructure<ProductDbContext>();
+        services.AddSharedInfrastructure<ProductDbContext>(configuration);
 
         // 3. Đăng ký các Repository riêng của Product Service
         services.AddScoped<IProductRepository, ProductRepository>();
