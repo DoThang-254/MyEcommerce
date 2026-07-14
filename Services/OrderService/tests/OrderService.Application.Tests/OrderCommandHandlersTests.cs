@@ -61,7 +61,6 @@ namespace OrderService.Application.Tests
             };
 
             return new CreateOrderCommand(
-                CustomerId: Guid.NewGuid(),
                 CustomerName: "Nguyễn Văn A",
                 CustomerEmail: "vana@gmail.com",
                 CustomerPhone: "0912345678",

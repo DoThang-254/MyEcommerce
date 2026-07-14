@@ -10,6 +10,7 @@ public static class ProductSeed
     {
         var categoryId = Guid.Parse("11111111-1111-1111-1111-111111111111");
         var productId = Guid.Parse("f47ac10b-58cc-4372-a567-0e02b2c3d479");
+        var systemUserId = Guid.Parse("00000000-0000-0000-0000-000000000001");
 
         // Seed Category (required by Product)
         modelBuilder.Entity<Category>().HasData(new
@@ -18,7 +19,7 @@ public static class ProductSeed
             Name = "Default",
             Description = "Default category for seeded products",
             CreatedDate = DateTime.Parse("2026-04-01"),
-            CreatedBy = "Seed"
+            CreatedBy = systemUserId,
         });
 
         // Seed Product
@@ -28,7 +29,7 @@ public static class ProductSeed
             Name = "Bản tin công nghệ FU-News",
             CategoryId = categoryId,
             CreatedDate = DateTime.Parse("2026-04-01"),
-            CreatedBy = "Thắng",
+            CreatedBy = systemUserId,
             Status = ProductStatus.Active,
             StockQuantity = 100
         });
