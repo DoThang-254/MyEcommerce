@@ -26,7 +26,14 @@ public class ExceptionHandlingMiddleware
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "An unhandled exception occurred: {Message}", ex.Message);
+            //_logger.LogError(ex, "An unhandled exception occurred: {Message}", ex.Message);
+            var errorMessage = ex.InnerException != null ? ex.InnerException.Message : ex.Message;
+
+            // Chỉ log message thay vì truyền toàn bộ object 'ex'
+            _logger.LogError("HTTP {RequestMethod} {RequestPath} failed: {ErrorMessage}",
+                context.Request.Method,
+                context.Request.Path,
+                errorMessage);
             await HandleExceptionAsync(context, ex);
         }
     }
