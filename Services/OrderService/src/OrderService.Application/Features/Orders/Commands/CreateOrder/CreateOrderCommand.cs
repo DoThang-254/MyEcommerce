@@ -3,7 +3,7 @@
 namespace OrderService.Application.Features.Orders.Commands.CreateOrder
 {
     public record CreateOrderCommand(
-        Guid CustomerId,
+        //Guid CustomerId,
         string CustomerName,       // Bổ sung để nạp vào Order Constructor
         string CustomerEmail,      // Bổ sung để tạo Value Object EmailAddress
         string CustomerPhone,      // Bổ sung để tạo Value Object PhoneNumber

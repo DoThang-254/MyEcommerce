@@ -40,7 +40,7 @@ public abstract class BaseDbContext : DbContext, IUnitOfWork
 
     private void ApplyAbstractions()
     {
-        var currentUserId = _currentUserService.UserId ?? "System";
+        var currentUserId = _currentUserService.UserId;
 
         // Quét các thực thể đang được theo dõi bởi EF Core có kế thừa IBaseEntity
         var entries = ChangeTracker.Entries<IBaseEntity>();

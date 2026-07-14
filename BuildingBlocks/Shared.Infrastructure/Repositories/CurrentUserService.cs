@@ -12,6 +12,6 @@ namespace Shared.Infrastructure.Repositories
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public string? UserId => _httpContextAccessor.HttpContext?.Request.Headers["X-User-Id"].FirstOrDefault();
+        public Guid UserId => Guid.TryParse(_httpContextAccessor.HttpContext?.Request.Headers["X-User-Id"].FirstOrDefault(), out Guid userId) ? userId : Guid.Empty;
     }
 }

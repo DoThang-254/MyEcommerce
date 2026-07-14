@@ -35,9 +35,16 @@ namespace OrderService.Application.Features.Orders.Commands.CreateOrder
             // Giả định phí ship tính toán từ hệ thống hoặc mặc định ban đầu
             var defaultShippingFee = Money.Of(30000, "VND");
 
+            var userIdString = _currentUserService.UserId;
+            if (userIdString == Guid.Empty)
+            {
+                return Result<Guid>.Failure("User is not authenticated or token is invalid."); // Tuỳ thuộc vào cấu trúc Result của bạn
+            }
+
             // 2. Tạo Order tổng trước bằng Constructor public của bạn (Trạng thái Pending)
             var order = new Order(
-                userId: request.CustomerId,
+                //userId: request.CustomerId,
+                userId: _currentUserService.UserId, // Lấy từ ICurrentUserService
                 customerName: request.CustomerName,
                 email: email,
                 phone: phone,

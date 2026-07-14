@@ -19,7 +19,7 @@ public class Product :  AggregateRoot<Guid>
 
     private Product() { } // EF Core constructor
 
-    public static Product Create(string name, string? description, decimal price, int stockQuantity, Guid categoryId, string? imageUrl = null , string? userId = null)
+    public static Product Create(string name, string? description, decimal price, int stockQuantity, Guid categoryId, string? imageUrl = null , Guid? userId = null)
     {
         if (string.IsNullOrWhiteSpace(name))
             throw new ArgumentException("Product name cannot be empty.", nameof(name));

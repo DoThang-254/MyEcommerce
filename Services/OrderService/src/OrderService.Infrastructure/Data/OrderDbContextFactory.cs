@@ -49,7 +49,7 @@ public class OrderDbContextFactory : IDesignTimeDbContextFactory<OrderDbContext>
 
         var mockCurrentUserService = new Mock<ICurrentUserService>();
         // Set cứng UserId là "System-Migration" để nếu có lưu seed data thì biết là do chạy lệnh EF
-        mockCurrentUserService.Setup(m => m.UserId).Returns("System-Migration");
+        mockCurrentUserService.Setup(m => m.UserId).Returns(Guid.NewGuid());
 
         return new OrderDbContext(builder.Options, mockMediator.Object, mockCurrentUserService.Object);
     }

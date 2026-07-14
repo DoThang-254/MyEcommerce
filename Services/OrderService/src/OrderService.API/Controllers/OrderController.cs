@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using OrderService.Application.Features.Orders.Commands.CreateOrder;
 using OrderService.Application.Features.Orders.Commands.UpdateOrder;
 using OrderService.Application.Features.Orders.Queries;
@@ -38,6 +39,7 @@ namespace OrderService.API.Controllers
         /// <param name="command">Thông tin đơn hàng và danh sách sản phẩm từ Body</param>
         /// <param name="cancellationToken">Token hủy request</param>
         /// <returns>ID của đơn hàng vừa tạo (Guid)</returns>
+        [Authorize]
         [HttpPost]
         [ProducesResponseType(typeof(Guid), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
