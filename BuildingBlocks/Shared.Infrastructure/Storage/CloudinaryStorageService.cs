@@ -1,6 +1,8 @@
 ﻿using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
+using Microsoft.AspNetCore.Http;
 using Shared.Application.Common.Interfaces;
+using Shared.Application.Common.Models;
 
 namespace Shared.Infrastructure.Storage
 {

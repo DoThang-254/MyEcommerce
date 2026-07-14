@@ -5,7 +5,7 @@ using Shared.Domain.ValueObjects;
 
 namespace ProductService.Domain.Entities;
 
-public class Product :  AggregateRoot<Guid>
+public class Product : AggregateRoot<Guid>
 {
     public string Name { get; private set; } = string.Empty;
     public string? Description { get; private set; }
@@ -51,6 +51,13 @@ public class Product :  AggregateRoot<Guid>
         Description = description;
         Price = new Money(price);
         StockQuantity = stockQuantity;
+    }
+
+    public void UpdateImage(string imageUrl)
+    {
+        if (string.IsNullOrWhiteSpace(imageUrl))
+            throw new ArgumentException("Image URL cannot be empty.", nameof(imageUrl));
+
         ImageUrl = imageUrl;
     }
 
