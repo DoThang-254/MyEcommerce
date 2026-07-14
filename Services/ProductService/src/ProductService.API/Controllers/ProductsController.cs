@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using ProductService.Application.Features.Products.Commands.CreateProduct;
 using ProductService.Application.Features.Products.Commands.DeleteProduct;
 using ProductService.Application.Features.Products.Commands.UpdateProduct;
+using ProductService.Application.Features.Products.Commands.UploadProductImage;
 using ProductService.Application.Features.Products.Queries.GetProductById;
 using ProductService.Application.Features.Products.Queries.GetProducts;
 using Shared.API.Controllers;
@@ -54,24 +55,18 @@ namespace ProductService.API.Controllers
             return CreatedAtAction(nameof(GetById), new { id = result.Data }, result);
         }
 
-        [HttpPost("upload")]
-        public async Task<IActionResult> UploadImage(IFormFile file, CancellationToken cancellationToken)
+        [HttpPost("{id}/images")]
+        public async Task<IActionResult> UploadImage([FromRoute] Guid id, IFormFile file , CancellationToken cancellationToken)
         {
-            if (file == null || file.Length == 0) return BadRequest("File trống.");
+            // Khởi tạo command
+            var command = new UploadProductImageCommand(file, id);
 
-            // Mở stream từ FormFile
-            using var stream = file.OpenReadStream();
-
-            // Gọi service global từ Building Blocks
-            var imageUrl = await _fileStorageService.UploadFileAsync(
-                stream,
-                file.FileName,
-                "products", // Tên folder lưu trên Cloudinary
-                cancellationToken
-            );
+            // Gửi command cho MediatR xử lý
+            var imageUrl = await Mediator.Send(command, cancellationToken);
 
             return Ok(new { Url = imageUrl });
         }
+
 
         /// <summary>
         /// Update an existing product

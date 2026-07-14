@@ -4,10 +4,10 @@ namespace OrderService.Application.Features.Orders.Commands.CreateOrder
 {
     public record CreateOrderCommand(
         Guid CustomerId,
-        string CustomerName,       // Bổ sung để nạp vào Order Constructor
-        string CustomerEmail,      // Bổ sung để tạo Value Object EmailAddress
-        string CustomerPhone,      // Bổ sung để tạo Value Object PhoneNumber
-        AddressDto ShippingAddress, // Dùng Dto cấu trúc thay vì chuỗi phẳng để dễ map vào Value Object Address
+        string CustomerName,       
+        string CustomerEmail,      
+        string CustomerPhone,      
+        AddressDto ShippingAddress, 
         List<OrderItemDto> OrderItems
     ) : ICommand<Guid>;
 

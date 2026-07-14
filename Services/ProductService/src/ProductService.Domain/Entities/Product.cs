@@ -5,7 +5,7 @@ using Shared.Domain.ValueObjects;
 
 namespace ProductService.Domain.Entities;
 
-public class Product :  AggregateRoot<Guid>
+public class Product : AggregateRoot<Guid>
 {
     public string Name { get; private set; } = string.Empty;
     public string? Description { get; private set; }
@@ -19,7 +19,7 @@ public class Product :  AggregateRoot<Guid>
 
     private Product() { } // EF Core constructor
 
-    public static Product Create(string name, string? description, decimal price, int stockQuantity, Guid categoryId, string? imageUrl = null , string? userId = null)
+    public static Product Create(string name, string? description, decimal price, int stockQuantity, Guid categoryId, string? imageUrl = null, string? userId = null)
     {
         if (string.IsNullOrWhiteSpace(name))
             throw new ArgumentException("Product name cannot be empty.", nameof(name));
@@ -51,6 +51,13 @@ public class Product :  AggregateRoot<Guid>
         Description = description;
         Price = new Money(price);
         StockQuantity = stockQuantity;
+    }
+
+    public void UpdateImage(string imageUrl)
+    {
+        if (string.IsNullOrWhiteSpace(imageUrl))
+            throw new ArgumentException("Image URL cannot be empty.", nameof(imageUrl));
+
         ImageUrl = imageUrl;
     }
 
