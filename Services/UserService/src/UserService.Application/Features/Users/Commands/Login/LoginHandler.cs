@@ -2,9 +2,6 @@
 using Microsoft.Extensions.Logging;
 using Shared.Application.Common.Models;
 using Shared.Application.Features.Handlers;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using UserService.Domain.Exceptions;
 using UserService.Domain.Interfaces;
 
