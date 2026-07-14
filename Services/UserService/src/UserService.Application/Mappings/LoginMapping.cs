@@ -9,7 +9,7 @@ namespace UserService.Application.Mappings
         public LoginMapping()
         {
             CreateMap<User, UserInfoResponse>()
-                .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email.Value))
+                .ForCtorParam("Email", opt => opt.MapFrom(src => src.Email.Value))
                 .ForMember(dest => dest.Role, opt => opt.MapFrom(src => src.Role)); 
         }
     }
