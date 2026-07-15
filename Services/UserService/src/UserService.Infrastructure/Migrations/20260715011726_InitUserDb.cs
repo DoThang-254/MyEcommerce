@@ -8,11 +8,32 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace UserService.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class InitUserDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "AuditLogs",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    OccurredAtUtc = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ServiceName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", maxLength: 100, nullable: true),
+                    CorrelationId = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    IpAddress = table.Column<string>(type: "nvarchar(64)", maxLength: 64, nullable: true),
+                    EntityName = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
+                    EntityId = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Action = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    OldValues = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NewValues = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AuditLogs", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
@@ -27,9 +48,9 @@ namespace UserService.Infrastructure.Migrations
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     LastLoginAt = table.Column<DateTime>(type: "datetime2", nullable: true),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
+                    CreatedBy = table.Column<Guid>(type: "uniqueidentifier", maxLength: 255, nullable: true),
                     LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    LastModifiedBy = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
+                    LastModifiedBy = table.Column<Guid>(type: "uniqueidentifier", maxLength: 255, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -45,11 +66,29 @@ namespace UserService.Infrastructure.Migrations
                     { new Guid("b2c3d4e5-f6a1-4b6c-9d0e-1f2a3b4c5d6e"), null, new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc), "manager@ecommerce.com", "Store Manager", true, null, null, null, "$2a$11$w.N/yLw.e0kXlO9v8o6F.e7U/1d2k3j4h5g6f7e8d9c0b1a2A3B4C", "0987654321", "Manager", "manager_01" },
                     { new Guid("c3d4e5f6-a1b2-4c7d-0e1f-2a3b4c5d6e7f"), null, new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc), "thang@student.com", "Thắng Student", true, null, null, null, "$2a$11$w.N/yLw.e0kXlO9v8o6F.e7U/1d2k3j4h5g6f7e8d9c0b1a2A3B4C", "0900112233", "User", "thang_student" }
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AuditLogs_EntityName_EntityId",
+                table: "AuditLogs",
+                columns: new[] { "EntityName", "EntityId" });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AuditLogs_OccurredAtUtc",
+                table: "AuditLogs",
+                column: "OccurredAtUtc");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AuditLogs_UserId",
+                table: "AuditLogs",
+                column: "UserId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "AuditLogs");
+
             migrationBuilder.DropTable(
                 name: "Users");
         }
